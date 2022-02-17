@@ -9,67 +9,80 @@ To develop a python control code to move the mobilerobot along the predefined pa
 
 ## Procedure
 
-Step1:
+Step1: Initiate the MobileRobot.
 
-<br/>
+Step2: Connect your PC with the MobileRobot.
 
-Step2:
+Step3: Open Python program.
 
-<br/>
+Step4: Program the movements of the robot using python code.
 
-Step3:
+Step5: Execute the python program.
 
-<br/>
-
-Step4:
-
-<br/>
-
-Step5:
-
-<br/>
-
-## Program
-```python
+## Program 
+'''
+Developed By Name:S.Meena
+Reference No:212212400895
+'''
+```
 from robomaster import robot
 import time
+from robomaster import camera
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     ep_robot = robot.Robot()
     ep_robot.initialize(conn_type="ap")
 
     ep_chassis = ep_robot.chassis
 
-    ## Write your code here
+    ep_camera = ep_robot.camera
+
+    ep_led = ep_robot.led
+
+    '''
+    x = x-axis movement distance,( meters) [-5,5]
+    y = y-axis movement distance,( meters) [-5,5]
+    z = rotation about z axis ( degree)[-180,180]
+    xy_speed = xy axis movement speed,( unit meter/second) [0.5,2]
+    '''
+    print("Camera streaming started...")
+    ep_camera.start_video_stream(display=True, resolution=camera.STREAM_360P) 
+
+    ep_chassis.move(x=1.5, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_led.set_led(comp="all",r=255,g=0,b=0,effect="on")   
+    time.sleep(2)
+    ep_chassis.drive_speed(x=0.2,y=0,z=10)
+    time.sleep(20)
+    ep_chassis.move(x=0.75, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-135, xy_speed=0.75).wait_for_completed()
+    ep_led.set_led(comp="all",r=0,g=255,b=0,effect="on")
+    time.sleep(2)
+    ep_chassis.move(x=1, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=90, xy_speed=0.75).wait_for_completed()
+    ep_led.set_led(comp="all",r=0,g=0,b=255,effect="on")
+    time.sleep(2)
+    ep_chassis.move(x=1.5, y=0, z=0, xy_speed=0.75).wait_for_completed()
+     
+
+    ep_camera.stop_video_stream()
+    print("Stopped video streaming...")
+    
 
 
+    ep_robot.close()
+    ```
+
+## Mobile Robot Movement Image:
+![image](https://user-images.githubusercontent.com/94677128/154436406-b756a5e2-c758-456c-b230-621a4e77bfdc.png)
+![image](https://user-images.githubusercontent.com/94677128/154436435-3a0e7c9b-1541-4eba-a2a9-0d3076d70c4a.png)
+![image](https://user-images.githubusercontent.com/94677128/154436485-dd661a57-46e4-429f-a080-f5e10d2e5ab9.png)
 
     
-    ep_robot.close()
-```
 
-## MobileRobot Movement Image:
-
-![robo](./img/robomaster.png)
-
-Insert image here
-
-
-<br/>
-<br/>
-<br/>
-<br/>
 
 ## MobileRobot Movement Video:
 
-Upload your video in Youtube and paste your video-id here
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-
-<br/>
-<br/>
-<br/>
-<br/>
+https://youtu.be/m6alI4QeWsk
 
 ## Result:
 Thus the python program code is developed to move the mobilerobot in the predefined path.
