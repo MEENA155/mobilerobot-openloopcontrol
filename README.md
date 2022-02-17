@@ -73,9 +73,10 @@ if _name_ == '_main_':
     ```
 
 ## Mobile Robot Movement Image:
-![image](https://user-images.githubusercontent.com/94677128/154436406-b756a5e2-c758-456c-b230-621a4e77bfdc.png)
-![image](https://user-images.githubusercontent.com/94677128/154436435-3a0e7c9b-1541-4eba-a2a9-0d3076d70c4a.png)
-![image](https://user-images.githubusercontent.com/94677128/154436485-dd661a57-46e4-429f-a080-f5e10d2e5ab9.png)
+![Screenshot (125)](https://user-images.githubusercontent.com/94677128/154437398-b78548ed-d609-4967-8f7d-fe1e265bfc94.png)
+![Screenshot (122)](https://user-images.githubusercontent.com/94677128/154437447-c81a22d0-1b46-4cf7-80f1-0ebb549ed5ba.png)
+![Screenshot (124)](https://user-images.githubusercontent.com/94677128/154437498-1e224ed0-2393-4654-a184-4350057dd05e.png)
+
 
     
 
