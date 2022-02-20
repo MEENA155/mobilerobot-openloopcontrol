@@ -74,7 +74,7 @@ if _name_ == '_main_':
 
 ## Mobile Robot Movement Image:
 ![output](https://github.com/MEENA155/mobilerobot-openloopcontrol/blob/main/WhatsApp%20Image%202022-02-20%20at%208.04.16%20PM.jpeg?raw=true)
-![output]()
+![output](https://github.com/MEENA155/mobilerobot-openloopcontrol/blob/main/WhatsApp%20Image%202022-02-20%20at%208.04.17%20PM.jpeg?raw=true)
 
 
 
